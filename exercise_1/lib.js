@@ -49,6 +49,10 @@ function checkDivisibility(from,to,divisorArray){
 
         for (let item of divisorArray){
             
+            // skip dividing by 0
+            if (item.divisor == 0)
+                continue;;
+
             // if result is less than 0 , there is no point to continue (array is sorted in ascending order)
             if (current / item.divisor < 1 ) {
                 break;;
